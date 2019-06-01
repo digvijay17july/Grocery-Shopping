@@ -11,7 +11,7 @@ type DBConfig struct {
 	Password string
 	Name     string
 	Charset  string
-	PortNo   string
+	PortNo   int
 	Host     string
 }
 
@@ -24,7 +24,7 @@ func GetConfig() *Config {
 			Name:     os.Getenv("DATABASE_SCHEMA"),
 			Host:    os.Getenv("DATABASE_HOST"),
 			Charset:  "utf8",
-			PortNo:   os.Getenv("DATABASE_PORT"),
+			PortNo:   5432,
 		},
 	}
 }
